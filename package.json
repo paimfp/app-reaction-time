@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --dist-dir docs",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html -d ./docs --public-url ./ --no-source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,7 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
-    "parcel": "^2.0.1"
+    "cssnano": "^4.1.11",
+    "parcel": "^2.0.1",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "rxjs": "^7.5.1"
