@@ -28,4 +28,5 @@ const args = process.argv.slice(2).reduce((acc, cur, index, arr) => {
   return acc;
 }, {});
 
-args.path && args.path.split(" ").forEach((path) => deleteFolder(path));
+args.path == "string" &&
+  args.path?.split(" ").forEach((path) => deleteFolder(path));
