@@ -56,6 +56,8 @@ export const endGame = () => {
   centerDot();
   isPlaying = false;
   dot.style.backgroundColor = "#c3c3c3";
-  setDotText("Refresh");
+  dot.style.color = "black";
+  dot.style.fontWeight = "bold";
+  setDotText("Reload");
   fromEvent(dot, "click").subscribe(() => window.location.reload());
 };

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html -d ./docs --public-url ./ --no-source-maps",
+    "start": "node deleteFolder.js --path dist && parcel index.html --open",
+    "build": "node deleteFolder.js --path docs && parcel build index.html -d ./docs --public-url ./ --no-source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,5 +19,6 @@
   },
   "dependencies": {
     "rxjs": "^7.5.1"
-  }
+  },
+  "type": "module"
 }
